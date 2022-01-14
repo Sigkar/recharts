@@ -86,7 +86,7 @@ interface CurveProps {
   points?: Array<Point>;
   connectNulls?: boolean;
   path?: string;
-  pathRef?: (ref: SVGPathElement) => void;
+  pathRef?: (ref: SVGPathElement | HTMLElement) => void;
 }
 
 export type Props = Omit<PresentationAttributesWithProps<CurveProps, SVGPathElement>, 'type' | 'points'> & CurveProps;
